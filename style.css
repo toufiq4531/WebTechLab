@@ -1,0 +1,48 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+   
+  .center-content {
+    display: flex;
+    justify-content: center;
+  }
+   
+  .logo {
+    height: 50px;
+    border-radius: 50%;
+  }
+   
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+   
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+   
+  .form-box {
+    background-color: rgb(194, 194, 229);
+    height: 600px;
+    width: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+   
+  .box-3 {
+    background-color: green;
+    height: 200px;
+    width: 350px;
+  }
+   
+  .box-2 {
+    background-color: red;
+    height: 800px;
+    width: 200px;
+  }
+   
