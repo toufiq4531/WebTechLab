@@ -36,13 +36,13 @@ body {
   }
    
   .box-3 {
-    background-color: green;
+    background-color: rgb(123, 170, 229);
     height: 200px;
     width: 350px;
   }
    
   .box-2 {
-    background-color: red;
+    background-color: rgb(231, 162, 235);
     height: 800px;
     width: 200px;
   }
