@@ -1,0 +1,11 @@
+.AQI-box {
+    background-color: rgb(231, 162, 235);
+    height: 800px;
+    width: 300px;
+}
+
+.AQI-table {
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
