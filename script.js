@@ -67,3 +67,19 @@ function validate() {
 
   return valid;
 }
+
+function signInValidate() {
+  let valid = true;
+
+  let username = document.getElementById('username').value.trim();
+  let password = document.getElementById('signin_pass').value.trim();
+
+  //credentials (username: "Pranto", password: "test123")
+  if (username == "Pranto" && password == "test123") {
+    window.location.href = "request.php";
+    return false;
+  } else {
+    document.getElementById('error').innerText = "Invalid username or password.";
+    return false;
+  }
+}
