@@ -69,8 +69,6 @@ function validate() {
 }
 
 function signInValidate() {
-  let valid = true;
-
   let username = document.getElementById('username').value.trim();
   let password = document.getElementById('signin_pass').value.trim();
 
@@ -79,7 +77,7 @@ function signInValidate() {
     window.location.href = "request.php";
     return false;
   } else {
-    document.getElementById('error').innerText = "Invalid username or password.";
+    document.getElementById('error2').innerText = "Invalid username or password.";
     return false;
   }
 }

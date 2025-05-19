@@ -317,7 +317,7 @@
         </div>
 
         <div class="signin-box">
-          <form action="request.php" method="post">
+          <form onsubmit="return signInValidate();">
             <div class="center-content"><h2>Sign In</h2></div>
             <div style="padding-left: 20px;">
               <label for="username"><b>Username</b></label>
@@ -330,8 +330,9 @@
             </div>
             <br>
             <div class="center-content">
-              <input type="submit" value="Sign In" onclick="return signInValidate()" />
+              <input type="submit" value="Sign In"/>
             </div>
+            <div id="error2" style="color:red; text-align:center; margin-top:10px;"></div>
           </form>
         </div>
         
