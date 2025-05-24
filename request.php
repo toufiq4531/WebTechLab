@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["signin_email"])) {
+        header("Location: index.html");
+        exit();
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +59,17 @@
     <div id="head">
         <h1>Select 10 Cities for AQI Comparison</h1>
     </div>
+    <div style='text-align: right; padding: 10px 20px;'>
+        <form action='logout.php' method='post' style='display:inline;'>
+        <input type='submit' value='Logout' style='background-color:#f44336; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer; font-weight:bold;'>
+        </form>
+    </div>
+    <?php
+        echo "<div style='text-align: left; padding: 10px'>
+        <h2>" . $_SESSION['username'] . "</h2>
+          </div>";
 
+    ?>
     <div id="option">
     <?php
     $con = mysqli_connect("localhost", "root", "", "aqi"); 
