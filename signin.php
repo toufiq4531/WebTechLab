@@ -1,24 +1,26 @@
 <?php
+session_start();
     if (session_status() >= 0){
         if(isset($_SESSION["signin_email"])) {
             header("refresh: 0.5; url = request.php");
         }
     }
+
     if(isset($_POST["submit"])) {
         $signInEmail = $_POST["signin_email"];
         $signInPass = $_POST["signin_pass"];
     }
 
     $conn = mysqli_connect('localhost', 'root', '', 'aqi');
-    $sql = "SELECT * FROM users WHERE email = '$signInEmail' and password = '$signInPass'";
+    $sql = "SELECT * FROM user WHERE email = '$signInEmail' and password = '$signInPass'";
     
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $count = mysqli_num_rows($result);
 
     if($count == 1){
-        session_start();
-        $username = $row['fullname'];
+        // session_start();
+        $username = $row['user_fname'];
         $_SESSION["username"] = $username;
         $_SESSION["signin_email"] = $signInEmail;
 
