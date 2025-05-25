@@ -4,6 +4,8 @@
         header("Location: index.html");
         exit();
     }
+
+$bg_color = isset($_COOKIE['bg_color']) ? $_COOKIE['bg_color'] : '#f4f4f4';
 ?>
 
 
@@ -14,6 +16,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Cities</title>
     <style>
+        body {
+            background-color: <?php echo htmlspecialchars($bg_color); ?>;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
         #option {
             display: flex;
             justify-content: center;

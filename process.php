@@ -148,18 +148,19 @@ if (isset($_GET['action']) && $_GET['action'] === 'confirm') {
         );
         
         if ($stmt->execute()) {
+        // Redirect to index.html after 2 seconds
+            header("Refresh: 2; url=index.html");
             echo "<div style='text-align: center; margin-top: 100px; color: green;'>
-                    Registration successful!
-                    <br><br><a href='index.html'>Sign in</a>
-                  </div>";
+            Registration successful! Redirecting to sign in page...
+                </div>";
         } else {
             echo "<div style='text-align: center; margin-top: 100px; color: red;'>
-                    Error: ".$stmt->error."
-                    <br><br><a href='index.html'>Go back</a>
-                  </div>";
+            Error: ".$stmt->error."
+            <br><br><a href='index.html'>Go back</a>
+                </div>";
         }
     }
-    
+
     $stmt->close();
     $con->close();
     exit();
