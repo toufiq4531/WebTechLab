@@ -27,11 +27,17 @@
                     background-color: #f4f4f4;
                     margin: 0;
                     padding: 20px;
+                    background-image: url('cloudy_1.gif');
+                    background-size: cover;
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    position: relative;
                 }
                 .container {
                     max-width: 1000px;
                     margin: 0 auto;
-                    background-color: white;
+                    background-color: rgb(180, 201, 201);
                     padding: 20px;
                     border-radius: 10px;
                     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -51,7 +57,7 @@
                     border-bottom: 1px solid #ddd;
                 }
                 th {
-                    background-color: rgb(194, 194, 229);
+                    background-color: white;
                     color: #333;
                 }
                 tr:hover {
@@ -77,7 +83,10 @@
                     </form>
                 </div>";
 
-
+        echo "<div style='text-align: right; padding: 10px'>
+        <h2>" . $_SESSION['signin_email'] . "</h2>
+          </div>";
+          
             echo "<div class='container'>
                     <h1>AQI Comparison of Selected Cities</h1>
                     <table>

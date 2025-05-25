@@ -10,7 +10,7 @@
     }
 
     $conn = mysqli_connect('localhost', 'root', '', 'aqi');
-    $sql = "SELECT * FROM users WHERE email = '$signInEmail' and password = '$signInPass'";
+    $sql = "SELECT * FROM user WHERE email = '$signInEmail' and password = '$signInPass'";
     
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -18,8 +18,6 @@
 
     if($count == 1){
         session_start();
-        $username = $row['fullname'];
-        $_SESSION["username"] = $username;
         $_SESSION["signin_email"] = $signInEmail;
 
         echo "You are now redirected";

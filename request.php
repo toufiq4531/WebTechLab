@@ -14,6 +14,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Cities</title>
     <style>
+        body{
+            background-image: url('cloudy_1.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+
+        }
         #option {
             display: flex;
             justify-content: center;
@@ -23,8 +32,9 @@
             margin-bottom: 20px;
         }
         .checkbox-container {
-            background-color: rgb(231, 162, 235);
+            background-color: rgb(180, 201, 201);
             padding: 20px;
+            margin: -130px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
@@ -65,8 +75,8 @@
         </form>
     </div>
     <?php
-        echo "<div style='text-align: left; padding: 10px'>
-        <h2>" . $_SESSION['username'] . "</h2>
+        echo "<div style='text-align: right; padding: 10px'>
+        <h2>" . $_SESSION['signin_email'] . "</h2>
           </div>";
 
     ?>

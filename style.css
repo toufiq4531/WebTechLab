@@ -1,5 +1,4 @@
 body {
-
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
@@ -28,7 +27,7 @@ body {
 }
 
 .form-box {
-  background-color: rgb(194, 194, 229);
+  background-color: rgb(95, 184, 184);
   height: 600px;
   width: 350px;
   padding: 20px;
@@ -36,7 +35,7 @@ body {
 }
 
 .signin-box {
-  background-color: rgb(123, 170, 229);
+  background-color: rgb(153, 196, 169);
   height: 200px;
   width: 350px;
 }
