@@ -330,7 +330,7 @@
             <div style="padding-left: 20px;">
               <label for="signin_email"><b>Email</b></label>
               <br>
-              <input type="text" placeholder="Enter email" name="signin_email" id="signin_email" />
+              <input type="text" placeholder="Enter Email" name="signin_email" id="signin_email" />
               <br>
               <label for="signin_pass"><b>Password</b></label>
               <br>
@@ -345,41 +345,77 @@
         </div>
         
       </div>
-      <div class="AQI-box"> 
-        <h2 class="center-content">City AQI Data</h2>
+      <div class="AQI-box">
+      <h2 class="center-content">Air Quality Index (AQI)</h2>
         <table class="AQI-table">
           <thead>
-            <tr>
-              <th>City</th>
-              <th>AQI</th>
-            </tr>
+              <tr>
+                  <th>City</th>
+                  <th>Country</th>
+                  <th>AQI</th>
+                  <th>Status</th>
+              </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>New York</td>
-              <td>45</td>
-            </tr>
-            <tr>
-              <td>Los Angeles</td>
-              <td>72</td>
-            </tr>
-            <tr>
-              <td>Chicago</td>
-              <td>55</td>
-            </tr>
-            <tr>
-              <td>Houston</td>
-              <td>60</td>
-            </tr>
-            <tr>
-              <td>Miami</td>
-              <td>50</td>
-            </tr>
+              <tr class="aqi-good">
+                  <td>Zurich</td>
+                  <td>Switzerland</td>
+                  <td>15</td>
+                  <td>Good</td>
+              </tr>
+              <tr class="aqi-good">
+                  <td>Helsinki</td>
+                  <td>Finland</td>
+                  <td>20</td>
+                  <td>Good</td>
+              </tr>
+              <tr class="aqi-good">
+                  <td>Wellington</td>
+                  <td>New Zealand</td>
+                  <td>22</td>
+                  <td>Good</td>
+              </tr>
+              <tr class="aqi-moderate">
+                  <td>New York</td>
+                  <td>USA</td>
+                  <td>45</td>
+                  <td>Moderate</td>
+              </tr>
+              <tr class="aqi-moderate">
+                  <td>Toronto</td>
+                  <td>Canada</td>
+                  <td>50</td>
+                  <td>Moderate</td>
+              </tr>
+              <tr class="aqi-moderate">
+                  <td>London</td>
+                  <td>UK</td>
+                  <td>55</td>
+                  <td>Moderate</td>
+              </tr>
+              <tr class="aqi-unhealthy">
+                  <td>Beijing</td>
+                  <td>China</td>
+                  <td>135</td>
+                  <td>Unhealthy</td>
+              </tr>
+              <tr class="aqi-unhealthy">
+                  <td>Delhi</td>
+                  <td>India</td>
+                  <td>210</td>
+                  <td>Very Unhealthy</td>
+              </tr>
+              <tr class="aqi-hazardous">
+                  <td>Dhaka</td>
+                  <td>Bangladesh</td>
+                  <td>250</td>
+                  <td>Hazardous</td>
+              </tr>
           </tbody>
-        </table>
-      </div>
-      
+      </table>
     </div>
+
+  </div>
     <script src="script.js"></script>
   </body>
 </html>

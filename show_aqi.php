@@ -3,24 +3,28 @@
     if(!isset($_SESSION["signin_email"])) {
         header("Location: index.html");
         exit();
-    } else {
-        if (isset($_POST['checkbox'])) {
-            $selected = $_POST['checkbox'];
-            $count = count($selected);
+    }
+    
+    $bg_color = isset($_COOKIE['bg_color']) ? $_COOKIE['bg_color'] : '#f4f4f4';
+    
+    if (isset($_POST['checkbox'])) {
+        $selected = $_POST['checkbox'];
+        $count = count($selected);
 
-            if ($count !== 10) {
-                echo "<h3 style='color:red; text-align: center;'>Please select exactly 10 cities. You will be redirected back shortly...</h3>";
-                header("Refresh: 2; url=" . $_SERVER['HTTP_REFERER']);
-                exit();
-            }
+        if ($count !== 10) {
+            echo "<h3 style='color:red; text-align: center;'>Please select exactly 10 cities. You will be redirected back shortly...</h3>";
+            header("Refresh: 2; url=" . $_SERVER['HTTP_REFERER']);
+            exit();
+        }
 
-            $con = mysqli_connect("localhost", "root", "", "aqi"); 
+        $con = mysqli_connect("localhost", "root", "", "aqi"); 
 
-            if (!$con) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
+        if (!$con) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
 
-            echo "
+
+          echo "
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -124,21 +128,18 @@
                     echo "<td class='$aqiClass'>$status</td>";
                     echo "</tr>";
                 }
+
             }
-
-            echo "</table></div>";
-
-            mysqli_close($con);
-
-        } else {
-            echo "<h3 style='color:red; text-align: center;'>No cities selected. You will be redirected back shortly...</h3>";
-            header("Refresh: 2; url=" . $_SERVER['HTTP_REFERER']);
-            exit();
         }
+
+        echo "</table></div>";
+
+        mysqli_close($con);
+
+    } else {
+        echo "<h3 style='color:red; text-align: center;'>No cities selected. You will be redirected back shortly...</h3>";
+        header("Refresh: 2; url=" . $_SERVER['HTTP_REFERER']);
+        exit();
     }
-?>
-
-
-<?php
 
 ?>

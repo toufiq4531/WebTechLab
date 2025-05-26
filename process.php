@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_GET['action'])) {
                 background-repeat: no-repeat;
                 position: relative;
             }
+
             .confirmation-container {
                 display: flex;
                 flex-direction: column;

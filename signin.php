@@ -1,9 +1,11 @@
 <?php
+session_start();
     if (session_status() >= 0){
         if(isset($_SESSION["signin_email"])) {
             header("refresh: 0.5; url = request.php");
         }
     }
+
     if(isset($_POST["submit"])) {
         $signInEmail = $_POST["signin_email"];
         $signInPass = $_POST["signin_pass"];
@@ -18,6 +20,7 @@
 
     if($count == 1){
         session_start();
+      styling
         $_SESSION["signin_email"] = $signInEmail;
 
         echo "You are now redirected";

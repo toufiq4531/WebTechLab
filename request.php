@@ -4,6 +4,8 @@
         header("Location: index.html");
         exit();
     }
+
+$bg_color = isset($_COOKIE['bg_color']) ? $_COOKIE['bg_color'] : '#f4f4f4';
 ?>
 
 
@@ -21,7 +23,6 @@
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
-
         }
         #option {
             display: flex;
