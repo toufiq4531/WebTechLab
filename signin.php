@@ -19,8 +19,6 @@ session_start();
     $count = mysqli_num_rows($result);
 
     if($count == 1){
-        session_start();
-      styling
         $_SESSION["signin_email"] = $signInEmail;
 
         echo "You are now redirected";
