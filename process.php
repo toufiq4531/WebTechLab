@@ -28,6 +28,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_GET['action'])) {
     <head>
         <title>Confirm Registration</title>
         <style>
+            body{     
+                background-image: url('cloudy_1.gif');
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+
             .confirmation-container {
                 display: flex;
                 flex-direction: column;
